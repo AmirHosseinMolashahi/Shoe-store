@@ -1,0 +1,128 @@
+@import '../../styles/contants.scss';
+
+.wrapper {
+    .container {
+        @media (max-width: $sm) {
+            gap: 3rem;
+            height: auto;
+        }
+        display: flex;
+        flex-direction: column;
+        height: 1100px;
+        gap: 5rem;
+
+        .AboutText{
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            padding: 3rem 5rem;
+
+            >h1 {
+                font-weight: bold;
+                font-size: 2rem;
+                text-transform: uppercase;
+                color: #131313;
+            }
+
+            >button {
+                width: fit-content;
+                padding: 0.7rem;
+                background-color: transparent;
+                text-transform: uppercase;
+                color: #131313;
+                border: 1.5px solid #131313;
+                cursor: pointer;
+            }
+        }
+
+        .top {
+            @media (max-width: $sm) {
+                padding-top: 2rem;
+                flex-direction: column;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 5rem;
+
+            .topText {
+                flex: 2;
+            }
+
+            .topPicture {
+                background-image: url('../../assets/about-us/bg/black2.jpeg');
+                background-size: cover;
+                flex: 3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem 5rem;
+                width: 100%;
+                height: 500px;
+                >div {
+                    @media (max-width: $sm){
+                        width: 15rem;
+                        height: 15rem;
+                    }
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 3px solid #ffffff;
+                    width: 25rem;
+                    height: 25rem;
+
+                    >img {
+                        @media (max-width: $sm){
+                            width: 10rem;
+                        }
+                        width: 20rem;
+                    }
+
+                    >:nth-child(1){
+                        transform: rotate(-40deg) scale(0.85);
+                    }
+
+                    >:nth-child(2){
+                        transform: rotate(60deg);
+                    }
+                }
+            }
+        }
+
+        .bottom {
+            @media (max-width: $sm) {
+                flex-direction: column-reverse;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 2rem;
+
+            .bottomText {
+                flex: 1.2;
+            }
+
+            .bottomPicture {
+                flex: 1.8;
+                background-image: url('../../assets/about-us/bg/black1.jpeg');
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2rem 5rem;
+                width: 100%;
+                height: 500px;
+
+                >img {
+                    @media (max-width: $sm){
+                        width: 15rem;
+                        transform: rotate(45deg) scale(0.8);
+                    }
+                    width: 20rem;
+                    transform: rotate(45deg);
+                    padding-bottom: 10rem;
+                }
+            }
+        }
+    }
+}

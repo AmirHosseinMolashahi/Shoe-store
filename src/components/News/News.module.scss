@@ -1,0 +1,159 @@
+@import '../../styles/contants.scss';
+
+.wrapper {
+    .container {
+        @media (max-width: $sm) {
+            position: relative;
+            margin-top: 0;
+            padding: 2rem;
+        }
+        margin-top: 3rem;
+        padding: 5rem;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        .textHeader {
+            @media (max-width: $sm) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 0.5rem;
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-transform: uppercase;
+
+            >:nth-child(1){
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
+
+            >:nth-child(2){
+                @media (max-width: $sm) {
+                    position: relative;
+                    margin-right: 0;
+                }
+                position: absolute;
+                right: 0;
+                margin-right: 5rem;
+                text-decoration: underline;
+                cursor: pointer;
+            }
+        }
+        .gridParent {
+            @media (max-width: $sm) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(8, 1fr);
+            }
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            gap: 1rem;
+
+            .text {
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                text-transform: uppercase;
+                >h1 {
+                    font-size: 2.5rem;
+                    font-weight: 500;
+                    color: #ffffff;
+                }
+
+                >hr {
+                    width: 5rem;
+                    height: 1px;
+                    border: none;
+                    background-color: #ff3a3a;
+                }
+            }
+            
+
+            .div1 { 
+                grid-area: 1 / 1 / 3 / 3;
+                width: 100%;
+                height: 30rem;
+                background: #00295f;
+                display: flex;
+                align-items: center;
+                padding: 0 4rem;
+                padding-right: 18rem;
+                justify-content: flex-start;
+
+                >img {
+                    @media (max-width: $sm){
+                        transform: scale(0.5) rotateY(180deg) translate(73px, 190px);
+                    }
+                    position: absolute;
+                    transform: scale(0.7) rotateY(180deg) translate(-223px, 54px);
+                }
+            }
+            .div2 {
+                @media (max-width: $sm){
+                    grid-area: 3 / 1 / 5 / 3;
+                }
+                grid-area: 1 / 3 / 3 / 5;
+                background-image: url('../../assets/news/2.png');
+
+                >:nth-child(1){
+                    @media (max-width: $sm){
+                        justify-content: center;
+                        padding-right: 5rem;
+                    }
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 0 5rem;
+                    padding-right: 17rem;
+                }
+            }
+            .div3 {
+                @media (max-width: $sm){
+                    grid-area: 5 / 1 / 7 / 2;
+                }
+                background-image: url('../../assets/news/3.jpeg');
+                grid-area: 3 / 1 / 4 / 2;
+                background-size: cover;
+                background-position: center;
+            }
+            .div4 {
+                @media (max-width: $sm){
+                    grid-area: 5 / 2 / 7 / 3;
+                }
+                background-image: url('../../assets/news/5.jpeg');
+                grid-area: 3 / 2 / 4 / 3;
+                background-size: cover;
+                background-position: center;
+            }
+            .div5 {
+                @media (max-width: $sm){
+                    grid-area: 7 / 1 / 9 / 2;
+                }
+                background-image: url('../../assets/news/4.jpeg');
+                grid-area: 3 / 3 / 4 / 4;
+                background-size: cover;
+                background-position: center;
+            }
+            .div6 {
+                @media (max-width: $sm){
+                    grid-area: 7 / 2 / 9 / 3;
+                }
+                background-image: url('../../assets/news/6.jpeg');
+                grid-area: 3 / 4 / 4 / 5;
+                background-size: cover;
+                background-position: center;
+            }
+
+            }
+    }
+}

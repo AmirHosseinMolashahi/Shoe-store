@@ -1,0 +1,46 @@
+@import '../../styles/contants.scss';
+
+.wrapper {
+    .container {
+        @media (max-width:$sm) {
+            flex-direction: column;
+            gap: 3rem;
+        }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 2rem 3rem;
+        background-color: black;
+        
+        .list {
+            @media (max-width:$sm) {
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 3rem;
+            }
+            display: flex;
+            gap: 20rem;
+            >ul {
+                @media (max-width:$sm) {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    gap: 2rem;
+                }
+                display: flex;
+                gap: 1rem;
+                list-style: none;
+                text-transform: uppercase;
+                color: white;
+                cursor: pointer;
+                
+                >li {
+                    transition: all 300ms ease;
+                    &:hover {
+                        color: #ff1414;
+                    }
+                }
+            }
+        }
+    }
+}
